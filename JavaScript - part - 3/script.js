@@ -32,6 +32,47 @@ console.log(str5.slice(6)); // "World!"
 console.log(str5.slice(-6)); // "World!" (negative index starts from the end)
 console.log(str5.slice(0, -6)); // "Hello " (up to but not including the last 6 characters)
 
+//replace Method - It replaces a specified value with another value in a string.
+//It takes two parameters: the value to be replaced and the value to replace it with.   
+let str6 = "Hello World!";  
+console.log(str6.replace("World", "JavaScript")); // "Hello JavaScript!"
+console.log(str6.replace("o", "a")); // "Hella World!" (only replaces the first occurrence)
+console.log(str6.replace(/o/g, "a")); // "Hella Warld!" (replaces all occurrences using regex)
+
+//repeat Method - It repeats a string a specified number of times and returns a new string.
+let str7 = "Hello! ";   
+console.log(str7.repeat(3)); // "Hello! Hello! Hello! "
+console.log("abc".repeat(2)); // "abcabc"
+
+//Practice Problems
+
+let msg = "help!";
+console.log(msg.trim().toUpperCase()); // "HELP!"
+
+let name = "ApnaCollage";
+console.log(name.slice(4, 9));
+console.log(name.indexOf("na"));
+console.log(name.replace("Apna", "Our"));
+
+
+// question 2
+
+let start = ['january', 'july', 'march', 'august'];
+start.shift();
+start.shift();
+start.unshift("june");
+start.unshift("july");
+console.log(start);
+
+
+//using unsplice 
+let months = ['january', 'july', 'march', 'august'];
+months.splice(0, 2, "june", "july");
+console.log(months);
+
+let languages = ["c", "c++", "html", "javascript", "python" ," java", "c#", "sql"];
+let ans = languages.reverse().indexOf("javascript");
+console.log(ans);
 
 
 
