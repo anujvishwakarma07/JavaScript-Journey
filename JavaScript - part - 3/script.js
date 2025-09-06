@@ -74,6 +74,47 @@ let languages = ["c", "c++", "html", "javascript", "python" ," java", "c#", "sql
 let ans = languages.reverse().indexOf("javascript");
 console.log(ans);
 
+// problem 4
+let game = [["x", null, "o"], [null, "x", null], ["o", null, "x"]];
+console.log(game);
+game[0][1] = "o";
+console.log(game)
+
+//Assignments Question 
+let array = [7, 9, 0, 6, 3, 9, -3, 6, 44, -45, -1];
+let result = [];
+for(let i = 0; i <= array.length; i++){
+    if(array[i] >= 0){
+        result.push(array[i]);
+    }else{
+        break;
+    }
+}
+console.log(result);
+
+//Get the last n elements ,  n can be any positive number
+let arr = [7, -9, 0, 2];
+let result2 = [];
+for (let j = arr.length - 1; j >= 0; j--){
+    if(arr[j] >= 0){
+        result2.push(arr[j]);
+    }else {
+        break;
+    }
+}
+console.log(result2);
+
+// string is blank or not
+let her_name = "dddddd";
+if(her_name == ''){
+    console.log("String is Empty")
+}else {
+    console.log("String is having elements");
+}
+
+
+//
+
 
 
 
