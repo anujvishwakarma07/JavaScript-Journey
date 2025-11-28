@@ -1,0 +1,5 @@
+This class is basicaly for to get familiar with the terminal command.
+
+In this class , I have learnt all basic terminal command like , how to move on the directories and , how to create folder and delete etc.
+
+As per the daily coding , i am using these command for a long time, yet i have saw all the lecture related to terminal , and recall all the command.
