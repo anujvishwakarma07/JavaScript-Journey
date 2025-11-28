@@ -36,42 +36,66 @@
 // demo();
 
 
-//Now lets try this same thing in the previous class random random color generation;
-let h1 = document.querySelector("h1");
+// //Now lets try this same thing in the previous class random random color generation;
+// let h1 = document.querySelector("h1");
 
-function randomColor(color) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            let random = Math.floor(Math.random() * 8) + 1;
-            if (random > 3) {
-                reject("Promise Rejected");
-            }
-            h1.style.color = color;
-            console.log(`the ${color} was changed`);
-            resolve("Promise Resolved");
-            // console.log("")
+// function randomColor(color) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let random = Math.floor(Math.random() * 8) + 1;
+//             if (random > 3) {
+//                 reject("Promise Rejected");
+//             }
+//             h1.style.color = color;
+//             console.log(`the ${color} was changed`);
+//             resolve("Promise Resolved");
+//             // console.log("")
 
-        }, 1000);
+//         }, 1000);
 
-    })
-}
+//     })
+// }
 
-async function h1Color() {
+// async function h1Color() {
 
-    try {
-        await randomColor("red");
-        await randomColor("blue");
-        await randomColor("pink");
-        await randomColor("green");
-        await randomColor("red");
-        await randomColor("blue");
-        await randomColor("pink");
-        await randomColor("green");
-    } catch (err) {
-        console.log("Promise Rejected :" + err);
+//     try {
+//         await randomColor("red");
+//         await randomColor("blue");
+//         await randomColor("pink");
+//         await randomColor("green");
+//         await randomColor("red");
+//         await randomColor("blue");
+//         await randomColor("pink");
+//         await randomColor("green");
+//     } catch (err) {
+//         console.log("Promise Rejected :" + err);
+//     }
+//     let num = 9;
+//     console.log("The number is : "+num);
+// }
+
+// h1Color();
+
+// let url = "https://catfact.ninja/fact";
+// fetch(url)
+//     .then((response)=>{
+//         console.log(response)
+//         // console.log(response.json());
+//         response.json().then((data)=>{
+//             console.log(data);
+//         })
+//     }) 
+//     .catch((err)=>{
+//         console.log("ERROR", err);
+//     })
+
+
+    //Using async and await in the api calls and getting the data
+    let url1 = "https://catfact.ninja/fact"
+    async function getfact() {
+         let res = await fetch(url1);
+         let data = await res.json();
+        console.log(data);
     }
-    let num = 9;
-    console.log("The number is : "+num);
-}
 
-h1Color();
+    getfact()
