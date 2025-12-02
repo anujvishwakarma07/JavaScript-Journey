@@ -1,0 +1,12 @@
+{
+  "name": "fruits",
+  "version": "1.0.0",
+  "description": "this is only for checking for my knowledge how i have improve and understand it",
+  "license": "ISC",
+  "author": "Anuj Vishwakarma",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
