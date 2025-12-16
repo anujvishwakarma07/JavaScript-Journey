@@ -4,12 +4,11 @@ const path = require("path");
 
 let port = 3000;
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public/js")));
+app.use(express.static(path.join(__dirname, "public/style")));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
-app.use(express.static(path.join(__dirname,"public/js")));
-app.use(express.static(path.join(__dirname,"public/style")));
 
 
 app.listen((port), ()=>{
