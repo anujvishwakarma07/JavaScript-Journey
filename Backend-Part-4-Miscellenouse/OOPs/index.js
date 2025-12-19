@@ -67,37 +67,84 @@
 // console.log(p2);
 // console.log(p2.talk());
 
-//Inheritence - it is a machanism that allows to create new classes on the basic of already existing classes.
-class Person {
-    constructor(name, age) {
-        console.log("Parent class constructor");
+// //Inheritence - it is a machanism that allows to create new classes on the basic of already existing classes.
+// class Person {
+//     constructor(name, age) {
+//         console.log("Parent class constructor");
+//         this.name = name;
+//         this.age = age;
+//     }
+//     talk() {
+//         console.log(`Here I am ! My name is : ${this.name}`);
+//     }
+// }
+
+// class Students extends Person{
+//     constructor(name, age, marks) {
+//         console.log("Student class constructor");
+//         super(name, age);
+//         this.marks = marks;
+//     }
+// }
+// class Teacher extends Person{
+//     constructor(name, age, subject) {
+//         console.log("Student class constructor");
+//         super(name, age);
+//         this.subject = subject;
+//     }
+// }
+
+// let p1 = new Students("Harsh", 21, 94);
+// console.log(p1);
+// console.log(p1.talk());
+
+// let t1 = new Teacher("Rashmi", 21, "Physics");
+// console.log(t1);
+// console.log(t1.talk());
+
+//Another example of Inheritence -
+class Mammel {
+    constructor(name) {
         this.name = name;
-        this.age = age;
+        this.type = "warm-blooded";
     }
-    talk() {
-        console.log(`Here I am ! My name is : ${this.name}`);
+
+    eat() {
+        console.log("Yes I can eat");
     }
 }
 
-class Students extends Person{
-    constructor(name, age, marks) {
-        console.log("Student class constructor");
-        super(name, age);
-        this.marks = marks;
+class Dog extends Mammel {
+    constructor(name) {
+        super(name);
     }
-}
-class Teacher extends Person{
-    constructor(name, age, subject) {
-        console.log("Student class constructor");
-        super(name, age);
-        this.subject = subject;
+
+    eat() {  // we can override the function, but the applyiing function will be child not parent.
+        console.log("I can eat");
+    }
+
+    bark() {
+        console.log("I am dog")
     }
 }
 
-let p1 = new Students("Harsh", 21, 94);
-console.log(p1);
-console.log(p1.talk());
+class Cat extends Mammel {
+    constructor(name) {
+        super(name);
+    }
 
-let t1 = new Teacher("Rashmi", 21, "Physics");
-console.log(t1);
-console.log(t1.talk());
+    meow(){
+        console.log("I am Cat");
+    }
+}
+
+
+let cat1  = new Cat ("Missi");
+console.log(cat1);
+console.log(cat1.eat())
+console.log(cat1.meow())
+
+let dog1  = new Dog ("Tommy");
+console.log(dog1);
+console.log(dog1.eat())
+console.log(dog1.bark())
