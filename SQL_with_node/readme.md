@@ -1,0 +1,1 @@
+Note: There was a gap in commits due to my exams. Over the last few days, I’ve been practicing SQL directly in MySQL Workbench, so that work hasn’t been pushed to this repository yet. Repository updates will continue going forward.
