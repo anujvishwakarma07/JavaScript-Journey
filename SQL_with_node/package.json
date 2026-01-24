@@ -1,0 +1,19 @@
+{
+  "name": "sql_with_node",
+  "version": "1.0.0",
+  "description": "Note: There was a gap in commits due to my exams. Over the last few days, I’ve been practicing SQL directly in MySQL Workbench, so that work hasn’t been pushed to this repository yet. Repository updates will continue going forward.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^10.2.0"
+  },
+  "dependencies": {
+    "mysql2": "^3.16.1"
+  }
+}
