@@ -1,0 +1,25 @@
+
+.msg {
+  background-color: yellow;
+}
+.block {
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.sender {
+  background-color: blue;
+  color: white;
+  /* border-bottom: 2px solid black; */
+}
+.reciver {
+  background-color: greenyellow;
+}
+.chatblock{
+    background-color: aliceblue;
+    display: inline-block;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 20px;
+
+}
