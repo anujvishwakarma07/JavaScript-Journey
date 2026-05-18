@@ -4,13 +4,15 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import LudoBoard from './components/LudoBoard'
+import ArrayState from './components/ArrayState'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <LudoBoard />
+      {/* <LudoBoard /> */}
+      <ArrayState />
     </>
   )
 }
