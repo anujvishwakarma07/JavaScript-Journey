@@ -1,5 +1,6 @@
 import React, { use, useState } from 'react'
 import {v4 as uuidv4} from 'uuid';
+import './TodoList.css';
 
 
 const TodoList = () => {
@@ -62,28 +63,51 @@ const TodoList = () => {
         })
     }
   return (
-    <div>
-        <h3>Todo List</h3>
+    <div className="todo-container">
+        <h3 className="todo-header">Todo List</h3>
 
-        <input onChange={(event) => setTask(event.target.value)
-        } type="text" placeholder='Enter you task' name='task' />
-        <button onClick={addItem}>Add</button>
+        <div className="todo-input-group">
+            <input 
+                className="todo-input"
+                onChange={(event) => setTask(event.target.value)} 
+                type="text" 
+                placeholder='Enter your task' 
+                name='task' 
+            />
+            <button className="btn-primary" onClick={addItem}>Add</button>
+        </div>
 
-        <ul>
+        <ul className="todo-list-wrapper">
             {
              items.map((item) => {
-                return <li key={item.id} style={{textDecoration : item.isMarked ? "line-through" : "none"}}><span>{item.task}</span> &nbsp; &nbsp; &nbsp; <button onClick={() => deleteTodo(item.id)}>Delete</button>
-                &nbsp;&nbsp;&nbsp;
-                <button onClick={()=>upperCaseOne(item.id)}>UpperCaseOne</button>
-                &nbsp;&nbsp;&nbsp;
-                <button onClick={() => markAsDone(item.id)}>{item.isMarked ? "Unmark" : "Mark as done"}</button>
-                </li>
-
-                
+                return (
+                    <li key={item.id} className="todo-item">
+                        <span className={`todo-text ${item.isMarked ? 'marked' : ''}`}>
+                            {item.task}
+                        </span>
+                        
+                        <div className="todo-actions">
+                            <button className="btn-sm btn-delete" onClick={() => deleteTodo(item.id)}>
+                                Delete
+                            </button>
+                            <button className="btn-sm btn-action" onClick={() => upperCaseOne(item.id)}>
+                                UpperCase
+                            </button>
+                            <button 
+                                className={`btn-sm ${item.isMarked ? 'btn-unmark' : 'btn-mark'}`} 
+                                onClick={() => markAsDone(item.id)}
+                            >
+                                {item.isMarked ? "Unmark" : "Mark as done"}
+                            </button>
+                        </div>
+                    </li>
+                )
              })
             }
         </ul>
-        <button onClick={uppercaseTodos}>UppercaseAll</button>
+        <button className="btn-primary btn-uppercase-all" onClick={uppercaseTodos}>
+            Uppercase All Tasks
+        </button>
     </div>
   )
 }

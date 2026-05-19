@@ -15,8 +15,8 @@ function App() {
     <>
       {/* <LudoBoard /> */}
       {/* <ArrayState /> */}
-      {/* <TodoList /> */}
-      <LottryTicketGame title = "Lottery Game" />
+      <TodoList />
+      {/* <LottryTicketGame title = "Lottery Game" /> */}
     </>
   )
 }
