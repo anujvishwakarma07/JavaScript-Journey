@@ -6,6 +6,7 @@ import './App.css'
 import LudoBoard from './components/LudoBoard'
 import ArrayState from './components/ArrayState'
 import TodoList from './components/TodoList'
+import LottryTicketGame from './components/LottryTicketGame'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,7 +15,8 @@ function App() {
     <>
       {/* <LudoBoard /> */}
       {/* <ArrayState /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <LottryTicketGame title = "Lottery Game" />
     </>
   )
 }
