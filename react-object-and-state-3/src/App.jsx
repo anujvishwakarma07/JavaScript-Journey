@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import LudoBoard from './components/LudoBoard'
 import ArrayState from './components/ArrayState'
+import TodoList from './components/TodoList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,8 @@ function App() {
   return (
     <>
       {/* <LudoBoard /> */}
-      <ArrayState />
+      {/* <ArrayState /> */}
+      <TodoList />
     </>
   )
 }
