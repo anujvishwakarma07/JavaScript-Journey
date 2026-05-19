@@ -3,10 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import LudoBoard from './components/LudoBoard'
-import ArrayState from './components/ArrayState'
-import TodoList from './components/TodoList'
-import LottryTicketGame from './components/LottryTicketGame'
+import Lottery from './components/Lottery'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,8 +13,9 @@ function App() {
     <>
       {/* <LudoBoard /> */}
       {/* <ArrayState /> */}
-      <TodoList />
+      {/* <TodoList /> */}
       {/* <LottryTicketGame title = "Lottery Game" /> */}
+      <Lottery  num = {3} winningSum={15}/>
     </>
   )
 }

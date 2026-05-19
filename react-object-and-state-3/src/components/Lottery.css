@@ -1,0 +1,83 @@
+.lottery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  padding: 3rem 4rem;
+  border-radius: 0;
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  font-family: var(--heading);
+  margin-top: 2rem;
+}
+
+.lottery-title {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-h);
+  letter-spacing: 1px;
+}
+
+.lottery-subtitle {
+  margin: 0 0 2rem 0;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.ticket-container {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--code-bg);
+  border-radius: 0;
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.ticket-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 85px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  background-color: var(--accent-bg);
+  border-radius: 0;
+  border: 2px solid var(--accent-border);
+}
+
+.ticket-num:hover {
+  border-color: var(--accent);
+}
+
+.winning-message {
+  color: #10b981;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.buy-btn {
+  background-color: var(--text-h);
+  color: var(--bg);
+  border: 2px solid transparent;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.buy-btn:hover {
+  background-color: transparent;
+  color: var(--text-h);
+  border-color: var(--text-h);
+}
