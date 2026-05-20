@@ -1,0 +1,104 @@
+.commentPage {
+  width: 100%;
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.commentHeading {
+  margin: 0 0 12px;
+  color: var(--text-h);
+}
+
+.commentList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 20px;
+}
+
+.commentCard {
+  border: 1px solid var(--border);
+  padding: 12px;
+  background: transparent;
+}
+
+.commentCard p {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.commentCard p + p {
+  margin-top: 6px;
+}
+
+.commentLabel {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.commentFormWrap {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.commentFormTitle {
+  margin: 0 0 12px;
+  color: var(--text-h);
+}
+
+.commentForm {
+  border: 1px solid var(--border);
+  padding: 16px;
+}
+
+.commentForm .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.commentForm label {
+  color: var(--text-h);
+}
+
+.commentForm input,
+.commentForm textarea {
+  font: inherit;
+  color: var(--text-h);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+.commentForm textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.commentForm input:focus-visible,
+.commentForm textarea:focus-visible,
+.commentForm button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.commentForm button {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--accent-bg);
+  color: var(--text-h);
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.commentForm button:hover {
+  border-color: var(--accent-border);
+}
