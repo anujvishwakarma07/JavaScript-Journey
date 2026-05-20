@@ -83,6 +83,19 @@
   resize: vertical;
 }
 
+.commentForm .fieldError {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--accent);
+}
+
+.commentForm input.invalid,
+.commentForm textarea.invalid {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
 .commentForm input:focus-visible,
 .commentForm textarea:focus-visible,
 .commentForm button:focus-visible {
