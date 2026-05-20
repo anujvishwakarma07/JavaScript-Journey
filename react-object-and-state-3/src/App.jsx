@@ -4,9 +4,13 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Lottery from './components/Lottery'
+import { countSum } from './components/helper'
 
 
 function App() {
+  const winCondition = (ticket) => {
+    return countSum(ticket) === 15;
+  }
   const [count, setCount] = useState(0)
 
   return (
@@ -15,7 +19,7 @@ function App() {
       {/* <ArrayState /> */}
       {/* <TodoList /> */}
       {/* <LottryTicketGame title = "Lottery Game" /> */}
-      <Lottery  num = {3} winningSum={15}/>
+      <Lottery num={3} winCondition={winCondition} />
     </>
   )
 }

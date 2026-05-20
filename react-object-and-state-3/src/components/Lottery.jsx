@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import Ticket from './Ticket';
 import { countSum, genTickets } from './helper';
 import './Lottery.css';
+import Button from './Button';
 
-const Lottery = ({num, winningSum }) => {
+const Lottery = ({ num, winCondition }) => {
 
-    let [ticket, setTicket] = useState(genTickets(num));
-    let isWinning = countSum(ticket) === winningSum;
+    let [ticket, setTicket] = useState(() => genTickets(num));
+    let isWinning = winCondition(ticket);
 
     const buyTicket = () => {
         setTicket(genTickets(num));
@@ -15,12 +16,12 @@ const Lottery = ({num, winningSum }) => {
     return (
         <div className="lottery-container">
             <h1 className="lottery-title">Lottery Game</h1>
-            <p className="lottery-subtitle">Match the sum to {winningSum}</p>
+            <p className="lottery-subtitle">Match the sum to {winCondition(ticket)}</p>
             
             <Ticket ticket={ticket} />
             
             <p className="winning-message">{isWinning ? "🎉 Congratulations! You won! 🎉" : "Good luck!"}</p>
-            <button className="buy-btn" onClick={buyTicket}>Buy New Ticket</button>
+            <Button action = {buyTicket} />
         </div>
     )
 }
