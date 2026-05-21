@@ -6,6 +6,8 @@ import './App.css'
 import Form from './components/Form'
 import CommentFrom from './components/CommentFrom'
 import Comment from './components/Comment'
+import CounterUseEffect from './components/CounterUseEffect'
+import Jokes from './components/Jokes'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +15,9 @@ function App() {
   return (
     <>
       {/* <Form /> */}
-      <Comment />
+      {/* <Comment /> */}
+      {/* <CounterUseEffect /> */}
+      <Jokes />
     </>
   )
 }
