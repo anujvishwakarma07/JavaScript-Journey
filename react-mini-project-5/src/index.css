@@ -1,3 +1,160 @@
- * {
-  font-family: "Finlandica Headline";
- }
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.weather-app-container {
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 0px; /* Sharp edges! */
+  padding: 35px 25px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 6px 6px 0px #0f172a; /* Flat minimalist brutalist style shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.app-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Material UI TextField Overrides */
+.search-input .MuiOutlinedInput-root {
+  color: #0f172a !important;
+  border-radius: 0px !important; /* Sharp edges! */
+  background-color: #f8fafc !important;
+}
+
+.search-input .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #0f172a !important;
+  border-width: 2px !important;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.search-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #0f172a !important;
+}
+
+.search-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2563eb !important; /* Simple clean blue for focus */
+}
+
+.search-input .MuiInputLabel-root {
+  color: #64748b !important;
+}
+
+.search-input .MuiInputLabel-root.Mui-focused {
+  color: #2563eb !important;
+}
+
+.search-btn {
+  background-color: #0f172a !important; /* Simple black */
+  color: #ffffff !important;
+  border-radius: 0px !important; /* Sharp edges! */
+  border: 2px solid #0f172a !important;
+  padding: 12px 24px !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.search-btn:hover {
+  background-color: #1e293b !important;
+  border-color: #1e293b !important;
+}
+
+.search-btn:active {
+  transform: translateY(1px);
+}
+
+/* ShowBox Cards and layout */
+.weather-card {
+  background-color: #ffffff !important;
+  border: 2px solid #0f172a !important;
+  border-radius: 0px !important; /* Sharp edges! */
+  color: #0f172a !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.weather-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.detail-item {
+  background-color: #f8fafc;
+  padding: 12px;
+  border-radius: 0px; /* Sharp edges! */
+  border: 2px solid #e2e8f0;
+  text-align: center;
+}
+
+.detail-item:hover {
+  background-color: #f1f5f9;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
